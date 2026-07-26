@@ -485,7 +485,7 @@ public class BaseClass {
             Assert.fail("ERROR : OCCURRED DURING RADIO BUTTON" + e.getMessage());
         }
     }
-
+/*
     public static void extentReportStart(String location) {
         extentReports = new ExtentReports();
         file = new File(location);
@@ -513,7 +513,7 @@ public class BaseClass {
         FileHandler.copy(scrfile, destfile);
         return destfile.getAbsolutePath();
     }
-
+*/
 }
 
 

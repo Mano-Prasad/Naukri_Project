@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeSuite;
 import java.io.IOException;
 
 public class ExtentReport_Test {
-
+/*
     public static ExtentTest extenttest;
 
     @BeforeSuite
@@ -22,4 +22,6 @@ public class ExtentReport_Test {
         BaseClass base = new BaseClass();
         base.extentReportTearDown(null);
     }
+*/
 }
+
