@@ -3,7 +3,7 @@ package com.pageobjectmanager;
 import com.pageobjectmodel.LoginPage;
 import com.pageobjectmodel.ProfileSummaryPage;
 import com.pageobjectmodel.ProfileUpdatePage;
-import com.utility.ExcelUtility;
+import com.utility.ExcelUtility2;
 import com.utility.FileReaderManager;
 
 public class PageObjectManager {
@@ -13,6 +13,7 @@ public class PageObjectManager {
     private LoginPage loginPage;
     private ProfileUpdatePage profileUpdatePage;
     private ProfileSummaryPage profileSummaryPage;
+    private ExcelUtility2 excelUtility2;
 
     public static PageObjectManager getPageObjectManager() {
         if (pageObjectManager == null) {
@@ -48,4 +49,12 @@ public class PageObjectManager {
         }
         return profileSummaryPage;
     }
+
+    public ExcelUtility2 getExcelUtility2(){
+        if(excelUtility2 == null){
+            excelUtility2 = new ExcelUtility2();
+        }
+        return excelUtility2;
+    }
+
 }

@@ -485,8 +485,8 @@ public class BaseClass {
             Assert.fail("ERROR : OCCURRED DURING RADIO BUTTON" + e.getMessage());
         }
     }
-/*
-    public static void extentReportStart(String location) {
+
+    public void extentReportStart(String location) {
         extentReports = new ExtentReports();
         file = new File(location);
 
@@ -497,10 +497,10 @@ public class BaseClass {
         extentReports.setSystemInfo("Java Version", System.getProperty("java.version"));
     }
 
-    public static void extentReportTearDown(String location) throws IOException {
+    public void extentReportTearDown(String location) throws IOException {
         extentReports.flush();
         file = new File(location);
-        Desktop.getDesktop().browse((file).toURI());
+        Desktop.getDesktop().browse(file.toURI());
     }
 
     protected String captureScreenshot() throws IOException {
@@ -513,7 +513,15 @@ public class BaseClass {
         FileHandler.copy(scrfile, destfile);
         return destfile.getAbsolutePath();
     }
-*/
+
+    protected static void validation(WebElement element, String expected){
+        try{
+            String text=element.getText();
+            Assert.assertEquals(expected, text);
+        } catch (Exception e) {
+            Assert.fail("ERROR  : OCCURED DURING VALIDATION" + e.getMessage()); }
+    }
+
 }
 
 
